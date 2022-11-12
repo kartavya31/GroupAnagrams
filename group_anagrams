@@ -1,0 +1,9 @@
+from collections import defaultdict
+def groups_anagrams(a):  #function
+  dfdict=defaultdict(list)
+  for i in a:
+    sorted_i="".join(sorted(i))
+    dfdict[sorted_i].append(i)
+    return dfdict.values()
+    word=["eat","ate","bat","tab","arc","car","tea"]
+    print(groups_anagrams(word))
